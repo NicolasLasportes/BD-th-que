@@ -12,5 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+Route::post('/allComics', 'ComicController@getAllComics');
+
+Route::post('/comicsOrdered', 'ComicController@getAllComicsOrderedByAsc');
+
+Route::get('/wishList', function () {
+    return view('wishList');
+});
+
