@@ -16,7 +16,10 @@ class ComicController extends Controller
 
     public function getAllComicsOrderedByAsc()
     {
-        $comic = comic::all()->sortBy("created_at");
-        echo json_encode($comic);
+        $comic = comic::all()->sortByDESC("created_at");
+        $array = json_decode(json_encode($comic), true);
+        $array = array_values($array);
+        $array = json_encode($array);
+        echo $array;        
     }
 }

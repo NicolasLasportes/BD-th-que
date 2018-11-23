@@ -17,10 +17,6 @@ $.ajax(
 }).done(function(comics)
 {
     tabComics = JSON.parse(comics);
-    toInteger(tabComics);
-    console.log(tabComics)
-    sortNewComics(tabComics);
-    console.log(tabComics)
-    //displayNewComics(tabComics);
+    displayNewComics(tabComics);
 })
 
