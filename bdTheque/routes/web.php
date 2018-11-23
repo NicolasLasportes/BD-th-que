@@ -17,9 +17,10 @@ Route::get('/', function () {
 
 Route::post('/allComics', 'ComicController@getAllComics');
 
-Route::post('/comicsOrdered', 'ComicController@getAllComicsOrderedByAsc');
+Route::post('/comicsOrdered', 'ComicController@getAllComicsOrderedByDESC');
+
+Route::post('/thisComic/{id}', 'ComicController@displayThisComic');
 
 Route::get('/wishList', function () {
     return view('wishList');
 });
-

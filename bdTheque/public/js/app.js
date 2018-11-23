@@ -20,3 +20,10 @@ $.ajax(
     displayNewComics(tabComics);
 })
 
+$("#newComics").delegate('.news', 'click', function()
+{
+    var id = $(this).attr("id");
+    sendAjaxRequest(id); 
+    $('#exampleModal').modal('show');
+})
+
